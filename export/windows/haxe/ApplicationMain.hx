@@ -35,7 +35,7 @@ class ApplicationMain
 		ManifestResources.init(config);
 		#end
 
-		app.meta["build"] = "3";
+		app.meta["build"] = "5";
 		app.meta["company"] = "NebulaZone";
 		app.meta["file"] = "ProjectTest";
 		app.meta["name"] = "Project Test";
