@@ -20,5 +20,8 @@ class PlayState extends FlxState
 	override public function update(elapsed:Float)
 	{
 		super.update(elapsed);
+		text.y++;
+		if (text.y > FlxG.height)
+			text.y = 0 - 64;
 	}
 }
