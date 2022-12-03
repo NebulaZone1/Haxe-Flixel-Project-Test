@@ -33,7 +33,7 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_801e532e222627de_8_new,"states.PlayState","new",0x0e695aa3,"states.PlayState.new","states/PlayState.hx",8,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_13_create,"states.PlayState","create",0x0cd56899,"states.PlayState.create","states/PlayState.hx",13,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_22_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",22,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_21_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",21,0x36e487ae)
 namespace states{
 
 void PlayState_obj::__construct( ::Dynamic MaxSize){
@@ -74,8 +74,13 @@ HXLINE(  17)		this->add(this->text);
 
 
 void PlayState_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_22_update)
-HXDLIN(  22)		this->super::update(elapsed);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_21_update)
+HXLINE(  22)		this->super::update(elapsed);
+HXLINE(  23)		 ::flixel::text::FlxText fh = this->text;
+HXDLIN(  23)		fh->set_y((fh->y + 1));
+HXLINE(  24)		if ((this->text->y > ::flixel::FlxG_obj::height)) {
+HXLINE(  25)			this->text->set_y(( (Float)(-64) ));
+            		}
             	}
 
 
