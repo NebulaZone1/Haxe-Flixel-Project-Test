@@ -1,1 +1,1 @@
-# Haxe-Flixel-Project-Test
+# Test project for Haxe Flixel with FlxSprites
