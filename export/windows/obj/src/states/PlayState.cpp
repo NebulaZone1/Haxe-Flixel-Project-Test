@@ -33,7 +33,7 @@
 
 HX_DEFINE_STACK_FRAME(_hx_pos_801e532e222627de_12_new,"states.PlayState","new",0x0e695aa3,"states.PlayState.new","states/PlayState.hx",12,0x36e487ae)
 HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_17_create,"states.PlayState","create",0x0cd56899,"states.PlayState.create","states/PlayState.hx",17,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_34_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",34,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_46_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",46,0x36e487ae)
 namespace states{
 
 void PlayState_obj::__construct( ::Dynamic MaxSize){
@@ -72,22 +72,37 @@ HXLINE(  20)		this->sprite->loadGraphic(HX_("assets/images/bf.png",ea,8e,66,4d),
 HXLINE(  21)		this->sprite->set_x(( (Float)(100) ));
 HXLINE(  22)		this->sprite->set_y(( (Float)(0) ));
 HXLINE(  23)		this->add(this->sprite);
-HXLINE(  25)		 ::flixel::FlxSprite _hx_tmp = this->sprite;
-HXLINE(  26)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
-HXDLIN(  26)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->sprite->get_width());
-HXLINE(  27)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
-HXDLIN(  27)		Float _hx_tmp4 = (( (Float)(_hx_tmp3) ) - this->sprite->get_height());
-HXLINE(  25)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::Anon_obj::Create(3)
+HXLINE(  25)		this->sprite =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
+HXLINE(  26)		this->sprite->loadGraphic(HX_("assets/images/gf.png",c5,5c,2f,4d),null(),null(),null(),null(),null());
+HXLINE(  27)		this->sprite->set_x(( (Float)(100) ));
+HXLINE(  28)		this->sprite->set_y(( (Float)(0) ));
+HXLINE(  29)		this->add(this->sprite);
+HXLINE(  31)		 ::flixel::FlxSprite _hx_tmp = this->sprite;
+HXLINE(  32)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN(  32)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->sprite->get_width());
+HXLINE(  33)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN(  33)		Float _hx_tmp4 = (( (Float)(_hx_tmp3) ) - this->sprite->get_height());
+HXLINE(  31)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::Anon_obj::Create(3)
             			->setFixed(0,HX_("x",78,00,00,00),_hx_tmp2)
             			->setFixed(1,HX_("y",79,00,00,00),_hx_tmp4)
+            			->setFixed(2,HX_("angle",d3,43,e2,22),((Float)360.0))),5, ::Dynamic(::hx::Anon_obj::Create(1)
+            			->setFixed(0,HX_("type",ba,f2,08,4d),4)));
+HXLINE(  37)		 ::flixel::FlxSprite _hx_tmp5 = this->sprite;
+HXLINE(  38)		int _hx_tmp6 = ::flixel::FlxG_obj::width;
+HXDLIN(  38)		Float _hx_tmp7 = (( (Float)(_hx_tmp6) ) - this->sprite->get_width());
+HXLINE(  39)		int _hx_tmp8 = ::flixel::FlxG_obj::height;
+HXDLIN(  39)		Float _hx_tmp9 = (( (Float)(_hx_tmp8) ) - this->sprite->get_height());
+HXLINE(  37)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp5, ::Dynamic(::hx::Anon_obj::Create(3)
+            			->setFixed(0,HX_("x",78,00,00,00),_hx_tmp7)
+            			->setFixed(1,HX_("y",79,00,00,00),_hx_tmp9)
             			->setFixed(2,HX_("angle",d3,43,e2,22),((Float)360.0))),5, ::Dynamic(::hx::Anon_obj::Create(1)
             			->setFixed(0,HX_("type",ba,f2,08,4d),4)));
             	}
 
 
 void PlayState_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_34_update)
-HXDLIN(  34)		this->super::update(elapsed);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_46_update)
+HXDLIN(  46)		this->super::update(elapsed);
             	}
 
 

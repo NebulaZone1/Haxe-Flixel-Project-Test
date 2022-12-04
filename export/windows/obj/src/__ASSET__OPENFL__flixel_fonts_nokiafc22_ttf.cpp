@@ -13,12 +13,12 @@
 #include <openfl/text/Font.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_78712a569baebf83_147_new,"__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf","new",0xcba1a9da,"__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf.new","ManifestResources.hx",147,0xf77aa668)
+HX_DEFINE_STACK_FRAME(_hx_pos_78712a569baebf83_148_new,"__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf","new",0xcba1a9da,"__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf.new","ManifestResources.hx",148,0xf77aa668)
 
 void __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf_obj::__construct(){
-            	HX_GC_STACKFRAME(&_hx_pos_78712a569baebf83_147_new)
-HXDLIN( 147)		this->_hx___fromLimeFont( ::__ASSET__flixel_fonts_nokiafc22_ttf_obj::__alloc( HX_CTX ));
-HXDLIN( 147)		super::__construct(null());
+            	HX_GC_STACKFRAME(&_hx_pos_78712a569baebf83_148_new)
+HXDLIN( 148)		this->_hx___fromLimeFont( ::__ASSET__flixel_fonts_nokiafc22_ttf_obj::__alloc( HX_CTX ));
+HXDLIN( 148)		super::__construct(null());
             	}
 
 Dynamic __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf_obj::__CreateEmpty() { return new __ASSET__OPENFL__flixel_fonts_nokiafc22_ttf_obj; }
