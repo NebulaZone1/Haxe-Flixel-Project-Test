@@ -82,8 +82,8 @@
    <depend name="include/flixel/FlxSprite.h"/>
    <depend name="include/flixel/FlxState.h"/>
    <depend name="include/flixel/group/FlxTypedGroup.h"/>
-   <depend name="include/flixel/text/FlxText.h"/>
-   <depend name="include/flixel/text/FlxTextBorderStyle.h"/>
+   <depend name="include/flixel/tweens/FlxTween.h"/>
+   <depend name="include/flixel/tweens/misc/VarTween.h"/>
    <depend name="include/flixel/util/IFlxDestroyable.h"/>
    <depend name="include/states/PlayState.h"/>
   </file>
@@ -3158,6 +3158,9 @@
    <depend name="include/openfl/net/URLLoader.h"/>
    <depend name="include/openfl/net/URLRequest.h"/>
    <depend name="include/openfl/utils/_internal/Lib.h"/>
+  </file>
+  <file name="src/main/AssetPaths.cpp" >
+   <depend name="include/main/AssetPaths.h"/>
   </file>
   <file name="src/lime/utils/_UInt8ClampedArray/UInt8ClampedArray_Impl_.cpp" >
    <depend name="include/Std.h"/>
@@ -10691,6 +10694,7 @@
    <depend name="include/openfl/_Vector/BoolVector.h"/>
    <depend name="include/openfl/_Vector/IVector.h"/>
    <depend name="include/openfl/Lib.h"/>
+   <depend name="include/main/AssetPaths.h"/>
    <depend name="include/lime/utils/_UInt8ClampedArray/UInt8ClampedArray_Impl_.h"/>
    <depend name="include/lime/utils/_UInt8Array/UInt8Array_Impl_.h"/>
    <depend name="include/lime/utils/_UInt32Array/UInt32Array_Impl_.h"/>

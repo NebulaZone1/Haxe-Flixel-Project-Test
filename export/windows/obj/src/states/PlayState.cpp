@@ -18,11 +18,11 @@
 #ifndef INCLUDED_flixel_group_FlxTypedGroup
 #include <flixel/group/FlxTypedGroup.h>
 #endif
-#ifndef INCLUDED_flixel_text_FlxText
-#include <flixel/text/FlxText.h>
+#ifndef INCLUDED_flixel_tweens_FlxTween
+#include <flixel/tweens/FlxTween.h>
 #endif
-#ifndef INCLUDED_flixel_text_FlxTextBorderStyle
-#include <flixel/text/FlxTextBorderStyle.h>
+#ifndef INCLUDED_flixel_tweens_misc_VarTween
+#include <flixel/tweens/misc/VarTween.h>
 #endif
 #ifndef INCLUDED_flixel_util_IFlxDestroyable
 #include <flixel/util/IFlxDestroyable.h>
@@ -31,14 +31,14 @@
 #include <states/PlayState.h>
 #endif
 
-HX_DEFINE_STACK_FRAME(_hx_pos_801e532e222627de_8_new,"states.PlayState","new",0x0e695aa3,"states.PlayState.new","states/PlayState.hx",8,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_13_create,"states.PlayState","create",0x0cd56899,"states.PlayState.create","states/PlayState.hx",13,0x36e487ae)
-HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_21_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",21,0x36e487ae)
+HX_DEFINE_STACK_FRAME(_hx_pos_801e532e222627de_12_new,"states.PlayState","new",0x0e695aa3,"states.PlayState.new","states/PlayState.hx",12,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_17_create,"states.PlayState","create",0x0cd56899,"states.PlayState.create","states/PlayState.hx",17,0x36e487ae)
+HX_LOCAL_STACK_FRAME(_hx_pos_801e532e222627de_34_update,"states.PlayState","update",0x17cb87a6,"states.PlayState.update","states/PlayState.hx",34,0x36e487ae)
 namespace states{
 
 void PlayState_obj::__construct( ::Dynamic MaxSize){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_8_new)
-HXDLIN(   8)		super::__construct(MaxSize);
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_12_new)
+HXDLIN(  12)		super::__construct(MaxSize);
             	}
 
 Dynamic PlayState_obj::__CreateEmpty() { return new PlayState_obj; }
@@ -65,22 +65,29 @@ bool PlayState_obj::_hx_isInstanceOf(int inClassId) {
 }
 
 void PlayState_obj::create(){
-            	HX_GC_STACKFRAME(&_hx_pos_801e532e222627de_13_create)
-HXLINE(  14)		this->super::create();
-HXLINE(  15)		this->text =  ::flixel::text::FlxText_obj::__alloc( HX_CTX ,0,0,::flixel::FlxG_obj::width,HX_("Hello Haxe Flixel",e8,5c,c7,0d),64,null());
-HXLINE(  16)		this->text->setFormat(null(),64,-1,HX_("center",d5,25,db,05),null(),null(),null());
-HXLINE(  17)		this->add(this->text);
+            	HX_GC_STACKFRAME(&_hx_pos_801e532e222627de_17_create)
+HXLINE(  18)		this->super::create();
+HXLINE(  19)		this->sprite =  ::flixel::FlxSprite_obj::__alloc( HX_CTX ,null(),null(),null());
+HXLINE(  20)		this->sprite->loadGraphic(HX_("assets/images/bf.png",ea,8e,66,4d),null(),null(),null(),null(),null());
+HXLINE(  21)		this->sprite->set_x(( (Float)(100) ));
+HXLINE(  22)		this->sprite->set_y(( (Float)(0) ));
+HXLINE(  23)		this->add(this->sprite);
+HXLINE(  25)		 ::flixel::FlxSprite _hx_tmp = this->sprite;
+HXLINE(  26)		int _hx_tmp1 = ::flixel::FlxG_obj::width;
+HXDLIN(  26)		Float _hx_tmp2 = (( (Float)(_hx_tmp1) ) - this->sprite->get_width());
+HXLINE(  27)		int _hx_tmp3 = ::flixel::FlxG_obj::height;
+HXDLIN(  27)		Float _hx_tmp4 = (( (Float)(_hx_tmp3) ) - this->sprite->get_height());
+HXLINE(  25)		::flixel::tweens::FlxTween_obj::tween(_hx_tmp, ::Dynamic(::hx::Anon_obj::Create(3)
+            			->setFixed(0,HX_("x",78,00,00,00),_hx_tmp2)
+            			->setFixed(1,HX_("y",79,00,00,00),_hx_tmp4)
+            			->setFixed(2,HX_("angle",d3,43,e2,22),((Float)360.0))),5, ::Dynamic(::hx::Anon_obj::Create(1)
+            			->setFixed(0,HX_("type",ba,f2,08,4d),4)));
             	}
 
 
 void PlayState_obj::update(Float elapsed){
-            	HX_STACKFRAME(&_hx_pos_801e532e222627de_21_update)
-HXLINE(  22)		this->super::update(elapsed);
-HXLINE(  23)		 ::flixel::text::FlxText fh = this->text;
-HXDLIN(  23)		fh->set_y((fh->y + 1));
-HXLINE(  24)		if ((this->text->y > ::flixel::FlxG_obj::height)) {
-HXLINE(  25)			this->text->set_y(( (Float)(-64) ));
-            		}
+            	HX_STACKFRAME(&_hx_pos_801e532e222627de_34_update)
+HXDLIN(  34)		this->super::update(elapsed);
             	}
 
 
@@ -105,24 +112,22 @@ PlayState_obj::PlayState_obj()
 void PlayState_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(PlayState);
-	HX_MARK_MEMBER_NAME(text,"text");
+	HX_MARK_MEMBER_NAME(sprite,"sprite");
 	 ::flixel::FlxState_obj::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void PlayState_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(text,"text");
+	HX_VISIT_MEMBER_NAME(sprite,"sprite");
 	 ::flixel::FlxState_obj::__Visit(HX_VISIT_ARG);
 }
 
 ::hx::Val PlayState_obj::__Field(const ::String &inName,::hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"text") ) { return ::hx::Val( text ); }
-		break;
 	case 6:
+		if (HX_FIELD_EQ(inName,"sprite") ) { return ::hx::Val( sprite ); }
 		if (HX_FIELD_EQ(inName,"create") ) { return ::hx::Val( create_dyn() ); }
 		if (HX_FIELD_EQ(inName,"update") ) { return ::hx::Val( update_dyn() ); }
 	}
@@ -132,28 +137,28 @@ void PlayState_obj::__Visit(HX_VISIT_PARAMS)
 ::hx::Val PlayState_obj::__SetField(const ::String &inName,const ::hx::Val &inValue,::hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"text") ) { text=inValue.Cast<  ::flixel::text::FlxText >(); return inValue; }
+	case 6:
+		if (HX_FIELD_EQ(inName,"sprite") ) { sprite=inValue.Cast<  ::flixel::FlxSprite >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
 void PlayState_obj::__GetFields(Array< ::String> &outFields)
 {
-	outFields->push(HX_("text",ad,cc,f9,4c));
+	outFields->push(HX_("sprite",05,dc,95,c3));
 	super::__GetFields(outFields);
 };
 
 #ifdef HXCPP_SCRIPTABLE
 static ::hx::StorageInfo PlayState_obj_sMemberStorageInfo[] = {
-	{::hx::fsObject /*  ::flixel::text::FlxText */ ,(int)offsetof(PlayState_obj,text),HX_("text",ad,cc,f9,4c)},
+	{::hx::fsObject /*  ::flixel::FlxSprite */ ,(int)offsetof(PlayState_obj,sprite),HX_("sprite",05,dc,95,c3)},
 	{ ::hx::fsUnknown, 0, null()}
 };
 static ::hx::StaticInfo *PlayState_obj_sStaticStorageInfo = 0;
 #endif
 
 static ::String PlayState_obj_sMemberFields[] = {
-	HX_("text",ad,cc,f9,4c),
+	HX_("sprite",05,dc,95,c3),
 	HX_("create",fc,66,0f,7c),
 	HX_("update",09,86,05,87),
 	::String(null()) };

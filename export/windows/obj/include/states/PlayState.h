@@ -13,7 +13,6 @@ HX_DECLARE_CLASS1(flixel,FlxObject)
 HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
-HX_DECLARE_CLASS2(flixel,text,FlxText)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
 HX_DECLARE_CLASS1(states,PlayState)
 
@@ -52,7 +51,7 @@ class HXCPP_CLASS_ATTRIBUTES PlayState_obj : public  ::flixel::FlxState_obj
 		bool _hx_isInstanceOf(int inClassId);
 		::String __ToString() const { return HX_("PlayState",5d,83,c2,46); }
 
-		 ::flixel::text::FlxText text;
+		 ::flixel::FlxSprite sprite;
 		void create();
 
 		void update(Float elapsed);

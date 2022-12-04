@@ -690,6 +690,9 @@
 #ifndef INCLUDED_openfl_Lib
 #include <openfl/Lib.h>
 #endif
+#ifndef INCLUDED_main_AssetPaths
+#include <main/AssetPaths.h>
+#endif
 #ifndef INCLUDED_lime_utils__UInt8ClampedArray_UInt8ClampedArray_Impl_
 #include <lime/utils/_UInt8ClampedArray/UInt8ClampedArray_Impl_.h>
 #endif
@@ -3336,6 +3339,7 @@ __files__boot();
 ::openfl::_Vector::BoolVector_obj::__register();
 ::openfl::_Vector::IVector_obj::__register();
 ::openfl::Lib_obj::__register();
+::main::AssetPaths_obj::__register();
 ::lime::utils::_UInt8ClampedArray::UInt8ClampedArray_Impl__obj::__register();
 ::lime::utils::_UInt8Array::UInt8Array_Impl__obj::__register();
 ::lime::utils::_UInt32Array::UInt32Array_Impl__obj::__register();
@@ -4380,6 +4384,7 @@ __files__boot();
 ::lime::utils::_UInt32Array::UInt32Array_Impl__obj::__boot();
 ::lime::utils::_UInt8Array::UInt8Array_Impl__obj::__boot();
 ::lime::utils::_UInt8ClampedArray::UInt8ClampedArray_Impl__obj::__boot();
+::main::AssetPaths_obj::__boot();
 ::openfl::Lib_obj::__boot();
 ::openfl::_Vector::IVector_obj::__boot();
 ::openfl::_Vector::BoolVector_obj::__boot();
